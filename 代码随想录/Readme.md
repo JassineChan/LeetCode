@@ -1,6 +1,6 @@
 # 代码随想录算法训练营61期
-## 网页地址
-https://www.programmercarl.com/
+## 网页链接
+- https://www.programmercarl.com/
 ## 进度安排
 - day 1 任务以及具体安排：第一章  数组part01（4.23）
 - day 2 任务以及具体安排：第一章  数组part02（4.24）
