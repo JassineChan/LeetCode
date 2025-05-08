@@ -1,4 +1,4 @@
-# 面试题 02.07. 链表相交
+# 160. 相交链表
 # https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci/
 
 # Definition for singly-linked list.
