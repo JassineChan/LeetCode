@@ -28,17 +28,21 @@ class Solution:
         # return root
 
         # 单调递减栈(一次遍历)
+        # 栈中存放的是节点在 nums 中的索引
         min_stack = []
         nums_len = len(nums)
-        # 存放树的所有节点
-        tree = [None] * nums_len
+        # 创建一个与 nums 对应的 TreeNode 列表
+        tree_nodes = [TreeNode(num) for num in nums]
         for i in range(nums_len):
-            tree[i] = TreeNode(nums[i])
+            # 当前元素比栈顶的元素大，弹出栈顶元素并将其作为当前节点的左子节点
             while min_stack and nums[i] > nums[min_stack[-1]]:
                 idx = min_stack.pop()
                 tree[i].left = tree[idx]
+            # 如果栈不为空，当前节点应是栈顶节点的右子节点
             if min_stack:
                 tree[min_stack[-1]].right = tree[i]
+            # 当前节点入栈
             min_stack.append(i)
+        # 最后栈底的索引是根节点的位置
         return tree[min_stack[0]]
             
